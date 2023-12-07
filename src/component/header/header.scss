@@ -1,0 +1,17 @@
+.headerContainer {
+  width: 95%;
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  .headerWrap {
+    width: inherit;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    .headerLogo {
+      width: 38px;
+      height: 18px;
+    }
+  }
+}
