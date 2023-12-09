@@ -1,17 +1,124 @@
 .headerContainer {
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
   height: 56px;
   display: flex;
   align-items: center;
+  justify-content: center;
   .headerWrap {
     width: inherit;
     height: 36px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    .headerLeft {
+      display: flex;
+      align-items: center;
+      .headerLogo {
+        content: url("https://heights-store.com/web/baton/images/logo_mobile_black.png");
+      }
+      @media (max-width: 768px) {
+        .headerLogo {
+          content: url("https://heights-store.com/web/baton/images/logo_pc_black.png");
+          width: 100%;
+        }
+      }
+    }
+    .headerRight {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      // margin-right: -60px;
+    }
     .headerLogo {
       width: 38px;
       height: 18px;
+    }
+  }
+  .headerItemNav {
+    ul {
+      display: flex;
+      font-size: 14px;
+      gap: 16px;
+      li {
+        .textBold {
+          font-weight: bold;
+        }
+        .magazine {
+          border-right: 2px solid whitesmoke;
+          padding-right: 12px;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .headerIconWrap {
+    display: flex;
+    gap: 10px;
+    img {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+    }
+    .bergerIcon {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      .bergerIcon {
+        display: block;
+        margin: 10px;
+      }
+    }
+    .basketIconWrap {
+      position: relative;
+      .basketCount {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 10px;
+          color: white;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+  .headerList {
+    @media (max-width: 768px) {
+      display: none;
+    }
+    ul {
+      display: flex;
+      gap: 13px;
+      justify-content: center;
+      align-items: center;
+      padding-left: 24px;
+      li {
+        font-size: 20px;
+        font-weight: bold;
+        a {
+          color: #ddd;
+        }
+        .sale {
+          color: crimson;
+          border-right: 2px solid whitesmoke;
+          padding-right: 15px;
+        }
+        .active {
+          color: #000;
+        }
+      }
     }
   }
 }
